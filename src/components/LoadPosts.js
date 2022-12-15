@@ -6,7 +6,8 @@ export default function LoadPosts() {
     const [allPosts, setAllPosts] = useState([])
     const dispatch = usePostsDispatch();  
     const getPosts = async () => {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        // const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const response = await fetch('http://localhost:3000/posts/all.json');
         const data = await response.json();
         return data;
     }
